@@ -37,18 +37,12 @@ function dropFunction() {
 }
 
 window.addEventListener('click', function () {
-  if (!event.target.matches('.dropbtn')) {
+  function logIn() {
+      if (userInfo == "a" && passwordInfo == "a")
+  window.open = "index.html";
 
-    let dropdowns = document.getElementsByClassName("dropdown-content");
-    let i;
-    for (i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-});
+}
+
 
 function sendMessage() {
     stompClient.send("/app/teamId1", {}, JSON.stringify({'text': $("#message").val()}));
